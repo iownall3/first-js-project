@@ -10,7 +10,7 @@ function getComputerChoice(){
 
 function playRound(playerSelection, computerSelection){
     computerSelection = getComputerChoice();
-   
+    playerSelection = getComputerChoice();
     if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
         (playerSelection == 'scissors' && computerSelection == 'paper') ||
         (playerSelection == 'paper' && computerSelection == 'rock'))
@@ -31,16 +31,15 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
-    let playerOne = 0;
-    let computerOne = 0;
-    for (let i = 0; i < 5; i++){
+    for (let i = 0; i < 99; i++){
     let playerChoice = prompt("Rock, Paper, scissors?").toLowerCase;
-    let result = playRound(playerChoice, computerSelection)
-    console.log(`Your points ${playerOne}`)
-    console.log(`Your points ${computerOne}`)
+    computerSelection = getComputerChoice();
+    let result = playRound(playerChoice, computerSelection);
+    console.log(`Your points ${playerOne}`);
+    console.log(`Computer points ${computerOne}`);
     if (computerOne === 5 || playerOne === 5) {
         break;
-    }
+    };
 }
 }
     
