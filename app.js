@@ -37,7 +37,11 @@ function game(){
     let result = playRound(playerChoice, computerSelection);
     console.log(`Your points ${playerOne}`);
     console.log(`Computer points ${computerOne}`);
-    if (computerOne === 5 || playerOne === 5) {
+    if (computerOne === 5){
+        console.log("Computer Wins")
+        break;
+    } else (playerOne === 5){
+        console.log("You win!")
         break;
     };
 }
